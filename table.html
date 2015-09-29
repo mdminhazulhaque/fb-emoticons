@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>Facebook (Secret) Emoticons</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Md. Minhazul Haque" />
+    <meta name="description" content="An easy to use list of secret emoticons for Facebook" />
+    
+    <link rel="icon" type="image/x-icon" href="favicon.ico?v=1">
+    <link rel="publisher" href="https://plus.google.com/115081025762845243709/">
+    
+    <link href="emoticons.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="emoticons.js"></script>
+    
+    <style>
+    .container {
+        float: left;
+        position: relative;
+        width: 33%;
+    }
+    .offset {
+        float: left;
+        margin-left: 33%;
+        position: relative;
+    }
+    .well {
+        min-height: 20px;
+        padding: 10px;
+        margin-bottom: 20px;
+        background-color: #fafafa;
+        border: 1px solid #e8e8e8;
+    }
+    table {
+        width: 100%;
+    }
+    .table td {
+        text-align: center;
+    }
+    .table tr:hover {
+    background-color: #e8e8e8;
+    }
+    </style>
+</head>
+<body>
+    <div class="container offset">
+        <p class="well">
+            Copy emoticon code from "Text" box and paste into Facebook status, comments or messages.
+            Report issues to <a href="https://minhazulhaque.com/">Md. Minhazul Haque</a>
+        </p>
+        <table class="table">
+            <thead>
+                <tr><th>Icon</th><th>Name</th><th>Text</th></tr>
+            </thead>
+            <tbody id="emoticons">
+                <!-- emoticons go here -->
+            </tbody>
+        </table>
+    </div>
+    <script type="text/javascript">
+    (function() {
+    var html = "";
+    var table_emoticons = document.getElementById("emoticons");
+    for(var e = 0; e < emoticons.length; e++) {
+        var emoticon = emoticons[e];
+        html += '<tr>' +
+                '<td><span class="' + emoticon.class + '"></span></td>' +
+                '<td>' + emoticon.name + '</td>' +
+                '<td><input size="3" type="text" value="' + emoticon.chars + '"/></td>' +
+                '</tr>';
+    }
+    table_emoticons.innerHTML = html;
+    })();
+    </script>
+</body>
+</html>

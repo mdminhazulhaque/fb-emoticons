@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>Facebook (Secret) Emoticons</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Md. Minhazul Haque" />
+    <meta name="description" content="An easy to use list of secret emoticons for Facebook" />
+    
+    <link rel="icon" type="image/x-icon" href="favicon.ico?v=1">
+    <link rel="publisher" href="https://plus.google.com/115081025762845243709/">
+    
+    <link href="emoticons.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="emoticons.js"></script>
+    
+    <style>
+    .container {
+        float: left;
+        position: relative;
+/*         width: 33%; */
+    }
+    .offset {
+        float: left;
+        margin-left: 33%;
+        position: relative;
+    }
+    .well {
+        min-height: 20px;
+        padding: 10px;
+        margin-bottom: 20px;
+        background-color: #fafafa;
+        border: 1px solid #e8e8e8;
+    }
+    .emobox {
+        margin: 5px;
+        width: auto;
+        height: 48px;
+        float: left;
+        padding: 5px;
+        background-color: #fafafa;
+        border: 1px solid #e8e8e8;
+        text-align: center;
+    }
+    table {
+        width: 100%;
+    }
+    .table td {
+        text-align: center;
+    }
+    .table tr:hover {
+        background-color: #e8e8e8;
+    }
+    input { 
+        text-align: center; 
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Facebook (Secret) Emoticons</h1>
+        <p class="well">
+            Click the "Text" box under any emoticon and paste into Facebook status, comments or messages.
+            Report issues to <a href="https://minhazulhaque.com/">Md. Minhazul Haque</a>
+        </p>
+        <div id="emoticons">
+            <!-- emoticons go here -->
+        </div>
+    </div>
+    <script type="text/javascript">
+    (function() {
+    var html = "";
+    var table_emoticons = document.getElementById("emoticons");
+    for(var e = 0; e < emoticons.length; e++) {
+        var emoticon = emoticons[e];
+        html += '<div class="emobox">' +
+                '<span class="' + emoticon.class + '"></span><br>' +
+                '<input type="text" size="3" onClick="this.setSelectionRange(0, this.value.length)" value="' + emoticon.chars + '"/>' +
+                '</div>';
+    }
+    table_emoticons.innerHTML = html;
+    })();
+    </script>
+</body>
+</html>
